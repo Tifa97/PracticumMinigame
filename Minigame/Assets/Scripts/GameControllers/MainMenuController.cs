@@ -33,7 +33,8 @@ public class MainMenuController : USceneController
 
         btnSettings.onClick.AddListener(() =>
         {
-            Debug.Log("Set the settings");
+            var settings = new SettingsController();
+            AddChildSceneController(settings);
         });
 
         var btnExit = GameObject.Find(Names.BtnExit).GetComponent<Button>();
