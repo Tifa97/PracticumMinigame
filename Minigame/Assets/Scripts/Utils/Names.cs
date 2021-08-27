@@ -3,6 +3,7 @@
     //Scenes
     public static string MainMenu = "MainMenuScene";
     public static string Settings = "SettingsScene";
+    public static string Level = "Level";
 
     //MainMenu
     public static string BtnPlay = "BtnPlay";
@@ -18,4 +19,8 @@
 
     //Managers
     public static string InputManager = "InputManager";
+
+    //Characters
+    public static string Player = "Player";
+    public static string Enemy = "Enemy";
 }

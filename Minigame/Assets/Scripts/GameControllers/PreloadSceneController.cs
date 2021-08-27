@@ -13,7 +13,7 @@ public class PreloadSceneController : MonoBehaviour
 #endif
 
         //Need to setup singletons
-
+        AssetProvider.Prewarm();
         InputManager.StartInputManager();
 
         var MainMenuController = new MainMenuController();

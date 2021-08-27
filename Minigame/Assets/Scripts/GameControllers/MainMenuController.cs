@@ -25,7 +25,8 @@ public class MainMenuController : USceneController
 
         btnPlay.onClick.AddListener(() =>
         {
-            Debug.Log("Play that funky music white boy");
+            var level = new LevelController();
+            UNavigationController.SetRootViewController(level);
         });
 
         var btnSettings = GameObject.Find(Names.BtnSettings).GetComponent<Button>();

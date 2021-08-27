@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class AssetProvider : AssetBaseProvider
 {
-    public GameObject player;
+    //public GameObject player;
+    public GameObject bullet;
+
+    public int bulletPoolSize;
     private static AssetProvider _instance;
     public static AssetProvider Instance
     {
@@ -41,7 +44,7 @@ public class AssetProvider : AssetBaseProvider
             GameObject.DontDestroyOnLoad(_instance.poolObject);
 
             //bullet pool
-            //Instance.InstatiatePool(_instance.bullet, _instance.bulletPoolSize);
+            Instance.InstatiatePool(_instance.bullet, _instance.bulletPoolSize);
 
             //Instance.InstatiatePool(_instance.enemy1, _instance.defaultPoolSize);
             //Instance.InstatiatePool(_instance.enemy2, _instance.defaultPoolSize);
@@ -68,8 +71,8 @@ public class AssetProvider : AssetBaseProvider
     {
         switch (type)
         {
-            //case GameAsset.Bullet:
-            //    return Instance.bullet;
+            case GameAsset.Bullet:
+                return Instance.bullet;
             //case GameAsset.Footman:
             //    return Instance.enemy1;
             //case GameAsset.Archer:
@@ -82,8 +85,8 @@ public class AssetProvider : AssetBaseProvider
             //    return Instance.sphere2;
             //case GameAsset.Sphere3:
             //    return Instance.sphere3;
-            case GameAsset.Player:
-                return Instance.player;
+            //case GameAsset.Player:
+            //    return Instance.player;
             //case GameAsset.PlayerStartingPositionBlue:
             //    return Instance.playerStartingPositionBlue;
             //case GameAsset.PlayerStartingPositionRed:
@@ -94,9 +97,17 @@ public class AssetProvider : AssetBaseProvider
                 return null;
         }
     }
+
+    public static void ReturnAllToPool()
+    {
+        foreach (var item in GameObject.FindObjectsOfType<PoolableObject>())
+        {
+            item.ReturnToPool();
+        }
+    }
 }
 
 public enum GameAsset
 {
-    Bullet, Footman, Archer, Sphere1, Sphere2, Sphere3, Player /*PlayerStartingPositionBlue, PlayerStartingPositionRed, PlayerStartingPositionGreen*/
+    Bullet
 }
