@@ -6,8 +6,10 @@ public class AssetProvider : AssetBaseProvider
 {
     //public GameObject player;
     public GameObject bullet;
+    public GameObject enemy;
 
     public int bulletPoolSize;
+    public int defaultPoolSize = 10;
     private static AssetProvider _instance;
     public static AssetProvider Instance
     {
@@ -46,7 +48,7 @@ public class AssetProvider : AssetBaseProvider
             //bullet pool
             Instance.InstatiatePool(_instance.bullet, _instance.bulletPoolSize);
 
-            //Instance.InstatiatePool(_instance.enemy1, _instance.defaultPoolSize);
+            Instance.InstatiatePool(_instance.enemy, _instance.defaultPoolSize);
             //Instance.InstatiatePool(_instance.enemy2, _instance.defaultPoolSize);
 
             //load save
@@ -73,8 +75,8 @@ public class AssetProvider : AssetBaseProvider
         {
             case GameAsset.Bullet:
                 return Instance.bullet;
-            //case GameAsset.Footman:
-            //    return Instance.enemy1;
+            case GameAsset.Enemy:
+                return Instance.enemy;
             //case GameAsset.Archer:
             //    return Instance.enemy2;
             //case GameAsset.Box:
@@ -109,5 +111,6 @@ public class AssetProvider : AssetBaseProvider
 
 public enum GameAsset
 {
-    Bullet
+    Bullet,
+    Enemy
 }
