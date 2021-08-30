@@ -58,7 +58,7 @@ public class EnemySpawnController : MonoBehaviour
         for (int i = 0; i < spawnEnemies.Length; i++)
         {
             var enemy = FetchEnemy().GetComponent<EnemyAi>();
-            enemy.transform.position = spawnPosition;
+            enemy.transform.position = new Vector3(spawnPosition.x + i * RandomNumberGenerator.RandomNumber(), spawnPosition.y, spawnPosition.z + i * RandomNumberGenerator.RandomNumber());
         }
     }
 

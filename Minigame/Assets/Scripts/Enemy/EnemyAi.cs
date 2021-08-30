@@ -17,7 +17,6 @@ public class EnemyAi : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         //player health
         targetPosition = FindObjectOfType<PlayerController>().gameObject.transform;
-        agent.SetDestination(targetPosition.position);
     }
 
     void Update()
@@ -26,5 +25,6 @@ public class EnemyAi : MonoBehaviour
         {
             targetPosition = FindObjectOfType<PlayerController>().gameObject.transform;
         }
+        agent.SetDestination(targetPosition.position);
     }
 }
