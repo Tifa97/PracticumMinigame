@@ -19,7 +19,8 @@ public class BulletController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position += transform.forward * speed * Time.fixedDeltaTime;
-        if (Vector3.Distance(transform.position, originPosition) > 10)
+
+        if (Vector3.Distance(transform.position, originPosition) > 50)
         {
             if (bulletObject != null)
             {
@@ -40,5 +41,14 @@ public class BulletController : MonoBehaviour
         speed = bulletSpeed;
         shootingTarget = target;
         bulletDamage = damage;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == shootingTarget)
+        {
+            other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
+            bulletObject.ReturnToPool();
+        }
     }
 }
