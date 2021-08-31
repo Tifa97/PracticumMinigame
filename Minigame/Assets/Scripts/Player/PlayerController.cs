@@ -107,4 +107,15 @@ public class PlayerController : MonoBehaviour
 
         ToggleCursor(true);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == Names.Enemy)
+        {
+            Vector3 dir = other.contacts[0].point - transform.position;
+            // We then get the opposite (-Vector3) and normalize it
+            dir = -dir.normalized;
+            GetComponent<Rigidbody>().AddForce(dir * 10000);
+        }
+    }
 }
