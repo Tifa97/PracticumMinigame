@@ -27,4 +27,12 @@ public class EnemyAi : MonoBehaviour
         }
         agent.SetDestination(targetPosition.position);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == Names.Player)
+        {
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+        }
+    }
 }

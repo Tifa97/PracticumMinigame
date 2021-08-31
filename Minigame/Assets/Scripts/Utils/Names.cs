@@ -17,6 +17,13 @@
     public static string MusicSlider = "MusicSlider";
     public static string BtnMainMenu = "BtnMainMenu";
 
+    //Level
+    public static string EndMenu = "LevelEndMenu";
+    public static string BtnRetry = "BtnRestart";
+    public static string BtnToMenu = "BtnMenu";
+    public static string TxtFail = "TxtFail";
+    public static string TxtSuccess = "TxtSuccess";
+
     //Managers
     public static string InputManager = "InputManager";
 
