@@ -108,6 +108,8 @@ public class PlayerController : MonoBehaviour
         ToggleCursor(true);
     }
 
+    /*
+    Try to get pushback on collision
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == Names.Enemy)
@@ -117,5 +119,5 @@ public class PlayerController : MonoBehaviour
             dir = -dir.normalized;
             GetComponent<Rigidbody>().AddForce(dir * 10000);
         }
-    }
+    }*/
 }
