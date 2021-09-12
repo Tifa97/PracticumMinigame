@@ -713,9 +713,10 @@ GameObject:
   - component: {fileID: 494906004}
   - component: {fileID: 494906003}
   - component: {fileID: 494906002}
+  - component: {fileID: 494906005}
   m_Layer: 0
   m_Name: GreenVolume
-  m_TagString: Untagged
+  m_TagString: GreenVol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,6 +765,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &494906005
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494906001}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &505163119
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +908,7 @@ GameObject:
   - component: {fileID: 643476857}
   - component: {fileID: 643476858}
   - component: {fileID: 643476859}
+  - component: {fileID: 643476860}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1038,6 +1056,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalHealth: 5
   healthText: {fileID: 767695020}
+--- !u!114 &643476860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643476851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef4d2d2b4f626419ec34046e3f9e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolve: {fileID: 1217421019}
 --- !u!1 &651226119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1082,7 @@ GameObject:
   - component: {fileID: 651226120}
   m_Layer: 0
   m_Name: OrangeVolume
-  m_TagString: Untagged
+  m_TagString: OrangeVol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1563,7 +1594,7 @@ GameObject:
   - component: {fileID: 877491391}
   m_Layer: 0
   m_Name: BlueVolume
-  m_TagString: Untagged
+  m_TagString: BlueVol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2801,7 +2832,7 @@ GameObject:
   - component: {fileID: 1925996391}
   m_Layer: 0
   m_Name: RedVolume
-  m_TagString: Untagged
+  m_TagString: RedVol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
