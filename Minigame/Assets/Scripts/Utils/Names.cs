@@ -30,4 +30,10 @@
     //Characters
     public static string Player = "Player";
     public static string Enemy = "Enemy";
+
+    //Volumes
+    public const string RedVolume = "RedVol";
+    public const string GreenVolume = "GreenVol";
+    public const string BlueVolume = "BlueVol";
+    public const string OrangeVolume = "OrangeVol";
 }

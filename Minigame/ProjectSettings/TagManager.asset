@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - GreenVol
+  - RedVol
+  - OrangeVol
+  - BlueVol
   layers:
   - Default
   - TransparentFX
