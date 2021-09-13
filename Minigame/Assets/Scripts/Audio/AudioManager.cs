@@ -78,7 +78,7 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicVfx(float volume)
     {
-        outputt.SetFloat("VolumeVfx", volume);
+        outputt.SetFloat("VolumeVFX", volume);
         float v = volume;
         soundsVol.value = (int)volume;
     }
