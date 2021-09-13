@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private void RegisterShootingStopped()
     {
-        //throw new NotImplementedException();
+        weapon.StopShooting();
     }
 
     private void RegisterShooting()
