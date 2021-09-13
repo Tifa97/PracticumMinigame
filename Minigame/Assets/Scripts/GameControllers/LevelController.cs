@@ -18,12 +18,12 @@ public class LevelController : USceneController
 
     public override void SceneDidLoad()
     {
+        Time.timeScale = 1;
         GetUIComponents();
         HandleButtonClicks();
         EnemySpawnController.OnEnemiesSet += EnemySpawnController_OnEnemiesSet;
         EnemyHealth.OnEnemyDied += EnemyHealth_OnEnemyDied;
         PlayerHealth.OnPlayerDied += PlayerHealth_OnPlayerDied;
-        Time.timeScale = 1;
     }
 
     private void HandleButtonClicks()

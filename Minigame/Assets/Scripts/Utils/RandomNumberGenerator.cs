@@ -6,6 +6,6 @@ public class RandomNumberGenerator
 
     public static int RandomNumber()
     {
-        return rnd.Next(-10, 10);
+        return rnd.Next(-2, 2);
     }
 }
