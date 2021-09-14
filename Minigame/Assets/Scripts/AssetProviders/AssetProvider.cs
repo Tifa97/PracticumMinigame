@@ -39,20 +39,14 @@ public class AssetProvider : AssetBaseProvider
         if (_instance == null)
         {
             _instance = Resources.Load<AssetProvider>("AssetProvider");
-            //prefill pool (this could be done through reflection)
 
             _instance.poolObject = new GameObject();
             _instance.poolObject.name = "Pool";
             GameObject.DontDestroyOnLoad(_instance.poolObject);
 
-            //bullet pool
             Instance.InstatiatePool(_instance.bullet, _instance.bulletPoolSize);
 
             Instance.InstatiatePool(_instance.enemy, _instance.defaultPoolSize);
-            //Instance.InstatiatePool(_instance.enemy2, _instance.defaultPoolSize);
-
-            //load save
-            //Instance.InstatiatePool(_instance.box, _instance.defaultPoolSize);
         }
     }
 
@@ -77,24 +71,6 @@ public class AssetProvider : AssetBaseProvider
                 return Instance.bullet;
             case GameAsset.Enemy:
                 return Instance.enemy;
-            //case GameAsset.Archer:
-            //    return Instance.enemy2;
-            //case GameAsset.Box:
-            //    return Instance.box;
-            //case GameAsset.Sphere1:
-            //    return Instance.sphere1;
-            //case GameAsset.Sphere2:
-            //    return Instance.sphere2;
-            //case GameAsset.Sphere3:
-            //    return Instance.sphere3;
-            //case GameAsset.Player:
-            //    return Instance.player;
-            //case GameAsset.PlayerStartingPositionBlue:
-            //    return Instance.playerStartingPositionBlue;
-            //case GameAsset.PlayerStartingPositionRed:
-            //    return Instance.playerStartingPositionRed;
-            //case GameAsset.PlayerStartingPositionGreen:
-            //    return Instance.playerStartingPositionGreen;
             default:
                 return null;
         }
